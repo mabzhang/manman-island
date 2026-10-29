@@ -1,0 +1,46 @@
+/* Ownership, visiting and Agent-journal additions, using the original island palette. */
+#islandBrowseButton{font-size:11px;padding:8px 12px;white-space:nowrap}
+.hana-header-actions{gap:10px}
+.island-card-marker{display:inline-block;margin-top:11px;padding:3px 8px;background:#e8eddb;color:#7b8e6d;border-radius:10px;font-size:9px;letter-spacing:1px}
+#islandVisitNotice{max-width:780px;margin:18px auto 6px;padding:16px 24px;border:1px dashed #cdd8bd;border-radius:16px;background:#eef1e3;color:#7d8d6c;font-size:12px;line-height:1.8}
+#islandVisitNotice[hidden]{display:none}
+#islandVisitNotice p{margin:0 0 10px}
+#scene[data-read-only=true]{touch-action:pan-y;cursor:default!important}
+.camera-controls button:disabled{opacity:.45;cursor:default}
+#newIslandDialog{max-width:min(560px,calc(100vw - 28px));width:560px;max-height:calc(100dvh - 40px);overflow:auto;border:1px solid #ddcfb4;border-radius:23px;background:#fffaf0;color:#796b50;padding:28px;box-shadow:0 20px 65px #344a3030;line-height:1.9;font-size:13px}
+#newIslandDialog::backdrop{background:#3e533f45}
+#newIslandDialog h2{font-family:'Songti SC','STSong',serif;font-size:23px;font-weight:500;color:#936d55;margin:0 0 18px}
+#newIslandWarning{font-weight:600}
+#newIslandError{font-size:12px;color:#a06b55;overflow-wrap:anywhere}
+.island-confirm-check{display:flex;gap:9px;align-items:flex-start;margin:21px 0}
+.island-confirm-check input{margin-top:7px;accent-color:#a28362}
+#confirmNewIsland{background:#a98b68;border-color:#a98b68;color:#fffaf1}
+#confirmNewIsland:disabled{opacity:.45;cursor:default}
+#agentBookCount{font-size:9px;background:#f6f3e9a8}
+.book-tail{flex-wrap:wrap;gap:7px}
+#agentJournal{margin:18px 0 26px;padding:18px 0;border-bottom:1px dashed color-mix(in srgb,var(--book-accent) 40%,white)}
+.agent-journal-heading{display:flex;gap:10px;align-items:baseline;justify-content:space-between;flex-wrap:wrap}
+.agent-journal-heading h3{font-family:'Songti SC','STSong',serif;font-size:19px;font-weight:500;letter-spacing:1px;margin:0}
+.agent-journal-heading>span{font-size:10px;color:var(--book-accent)}
+#agentConnectionStatus{font-size:11px;line-height:1.9;color:var(--book-ink);overflow-wrap:anywhere}
+.agent-journal-hint,.agent-empty,.agent-record-meta{font-size:10px;line-height:1.9;color:var(--book-accent);overflow-wrap:anywhere}
+.agent-empty{padding:16px 0}
+.agent-record{border:1px solid color-mix(in srgb,var(--book-accent) 32%,white);border-radius:12px;margin:12px 0;background:#fffef780;overflow:hidden}
+.agent-record-summary{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:12px 14px;cursor:pointer;font-size:12px;background:color-mix(in srgb,var(--book-soft) 55%,transparent);list-style:none}
+.agent-record-summary:before{content:'›';font-size:18px;line-height:1;transform:rotate(0);transition:transform .2s}
+.agent-record[open]>.agent-record-summary:before{transform:rotate(90deg)}
+.agent-record-summary time{font-size:9px;color:var(--book-accent);margin-left:auto}
+.agent-state{font-size:9px;padding:2px 6px;border-radius:8px;background:#e6ecdf;color:#718463}
+.agent-state.failed,.agent-state.canceled{background:#f2e6d9;color:#9c7960}
+.agent-state.reading,.agent-state.analyzing,.agent-state.summarizing,.agent-state.queued{background:#e4eaed;color:#6d8793}
+.agent-record-body{padding:14px 16px;max-height:600px;overflow:auto;scrollbar-width:thin;overscroll-behavior:contain}
+.agent-record-body>p{font-size:12px;line-height:1.95;white-space:pre-wrap;overflow-wrap:anywhere;margin:8px 0}
+.agent-record-body>h4{font-size:14px;font-weight:600;margin:19px 0 9px;line-height:1.8}
+.agent-record-body>.agent-record-meta{font-size:10px;color:var(--book-accent)}
+.agent-record-body>.agent-error{color:#a07861;font-size:12px}
+.agent-record-body>.agent-progress{color:#788c9a;font-size:12px}
+.agent-sources{margin-top:16px;padding-top:10px;border-top:1px dashed #dce1d2;font-size:11px}
+.agent-sources>summary{cursor:pointer;color:var(--book-accent)}
+.agent-source-button{display:block;text-align:left;width:100%;margin:6px 0;padding:6px 0;background:transparent;border:0;color:var(--book-ink);font-size:11px;line-height:1.8;overflow-wrap:anywhere;text-decoration:underline;text-decoration-color:#cdd8bd;text-underline-offset:3px}
+.journal-living-label{font-size:11px;letter-spacing:1px;color:var(--book-accent);margin:12px 0 0}
+@media(max-width:600px){header{display:grid;grid-template-columns:1fr;padding:22px 20px 0;gap:12px}.brand{padding-right:100px}.hana-header-actions{justify-content:flex-end;gap:8px}#islandBrowseButton{font-size:10px;padding:7px 10px}#islandVisitNotice{margin:16px 18px 0;padding:14px;font-size:11px}#newIslandDialog{padding:22px;font-size:12px}#newIslandDialog h2{font-size:20px}.agent-record-summary{padding:11px;font-size:11px}.agent-record-summary time{width:100%;margin-left:18px;font-size:9px}.agent-record-body{padding:12px;max-height:480px}.agent-record-body>p{font-size:11px}.agent-record-body>h4{font-size:13px}.agent-journal-heading h3{font-size:17px}.book-tail{gap:6px}.book-open-label{margin-left:auto}}
