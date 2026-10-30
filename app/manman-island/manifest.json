@@ -1,0 +1,34 @@
+{
+  "manifestVersion": 2,
+  "id": "manman-island",
+  "name": "慢慢岛",
+  "version": "1.1.0",
+  "description": "慢慢岛 · 海屿：保留原岛与居民，岸边上船、连续离岸航行、钓鱼收信并返航；收藏随 Hana 保存。",
+  "entry": "index.js",
+  "icon": "assets/icon.svg",
+  "minAppVersion": "1.3.6-beta",
+  "capabilities": [
+    "app/resources.write",
+    "app/sessions.read",
+    "app/models.infer",
+    "app/tasks.manage"
+  ],
+  "contributes": {
+    "cards": [
+      {
+        "id": "island",
+        "title": "慢慢岛",
+        "description": "原岛陪伴、海域探索与安全返航；居民和记录本保留。",
+        "route": "/island.html",
+        "realization": "page",
+        "siteNavEntry": true,
+        "cardForm": "edge-to-edge",
+        "titleMode": "hide",
+        "pageIcon": "assets/island-nav.svg",
+        "face": {
+          "image": "assets/cover.png"
+        }
+      }
+    ]
+  }
+}
